@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
         mFragmentList.add(momentFragment);
         mFragmentList.add(settingsFragment);
 
-        FragmentAdapter fragmentAdapter = new FragmentAdapter(this.getSupportFragmentManager(), mFragmentList);
-        viewPager.setAdapter(fragmentAdapter);
+        mFragmentAdapter = new FragmentAdapter(this.getSupportFragmentManager(), mFragmentList);
+        viewPager.setAdapter(mFragmentAdapter);
         viewPager.setCurrentItem(0);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
